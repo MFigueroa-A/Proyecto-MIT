@@ -1,0 +1,369 @@
+ <!-- ============================================================== -->
+  <!-- Main wrapper - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+      data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+      <!-- ============================================================== -->
+      <!-- Topbar header - style you can find in pages.scss -->
+      <!-- ============================================================== -->
+
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Page wrapper  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+          <!-- ============================================================== -->
+          <!-- Bread crumb and right sidebar toggle -->
+          <!-- ============================================================== -->
+          <div class="page-breadcrumb bg-white">
+              <div class="row align-items-center">
+                  <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                      <h4 class="page-title">Dashboard</h4>
+                  </div>
+                  <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                      <div class="d-md-flex">
+                          <ol class="breadcrumb ms-auto">
+                              <li><a href="#" class="fw-normal">Dashboard</a></li>
+                          </ol>
+                          <!-- <a href="https://www.wrappixel.com/templates/ampleadmin/" target="_blank"
+                              class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Upgrade
+                              to Pro</a> -->
+                      </div>
+                  </div>
+              </div>
+              <!-- /.col-lg-12 -->
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Bread crumb and right sidebar toggle -->
+          <!-- ============================================================== -->
+          <!-- ============================================================== -->
+          <!-- Container fluid  -->
+          <!-- ============================================================== -->
+          <div class="container-fluid">
+<!--             <app-grafico>
+
+            </app-grafico> -->
+              <!-- ============================================================== -->
+              <!-- Three charts -->
+              <!-- ============================================================== -->
+<!--               <div class="row justify-content-center">
+                  <div class="col-lg-4 col-md-12">
+                      <div class="white-box analytics-info">
+                          <h3 class="box-title">Total Visit</h3>
+                          <ul class="list-inline two-part d-flex align-items-center mb-0">
+                              <li>
+                                  <div id="sparklinedash"><canvas id="sparklinedash" width="67" height="30"
+                                          style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
+                                  </div>
+                              </li>
+                              <li class="ms-auto"><span class="counter text-success">659</span></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12">
+                      <div class="white-box analytics-info">
+                          <h3 class="box-title">Total Page Views</h3>
+                          <ul class="list-inline two-part d-flex align-items-center mb-0">
+                              <li>
+                                  <div id="sparklinedash2"><canvas width="67" height="30"
+                                          style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
+                                  </div>
+                              </li>
+                              <li class="ms-auto"><span class="counter text-purple">869</span></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12">
+                      <div class="white-box analytics-info">
+                          <h3 class="box-title">Unique Visitor</h3>
+                          <ul class="list-inline two-part d-flex align-items-center mb-0">
+                              <li>
+                                  <div id="sparklinedash3"><canvas width="67" height="30"
+                                          style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
+                                  </div>
+                              </li>
+                              <li class="ms-auto"><span class="counter text-info">911</span>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div> -->
+
+
+              <!-- ============================================================== -->
+              <!-- PRODUCTS YEARLY SALES -->
+              <!-- ============================================================== -->
+              <div class="row">
+                  <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                      <div class="white-box">
+                          <h3 class="box-title">Gráfico Humedad Suelo - Fecha </h3>
+                          <div class="d-md-flex">
+                            <app-grafico>
+
+                            </app-grafico>
+
+                          </div>
+<!--                           <div id="ct-visits" style="height: 405px;">
+
+                              <div class="chartist-tooltip" style="top: -17px; left: -12px;"><span
+                                      class="chartist-tooltip-value"></span>
+
+                              </div>
+                          </div> -->
+                      </div>
+                  </div>
+              </div>
+              <!-- ============================================================== -->
+              <!-- TABLA DATOS REAL -->
+              <!-- ============================================================== -->
+              <div class="row">
+                  <div class="col-md-12 col-lg-12 col-sm-12">
+                      <div class="white-box">
+                          <div class="d-md-flex mb-3">
+                              <h3 class="box-title mb-0">Datos Tiempo Real</h3>
+                          </div>
+                          <!-- <app-tablareal> </app-tablareal> -->
+                          <div class="table-responsive">
+                            <table class="table no-wrap" >
+                                <thead>
+                                    <tr>
+                                        <!-- <th class="border-top-0">#ID</th> -->
+                                        <th class="border-top-0">Temperatura (C°)</th>
+                                        <th class="border-top-0">Humedad Ambiental (%)</th>
+                                        <th class="border-top-0">Humedad Suelo (%)</th>
+                                        <th class="border-top-0">Fecha</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ngFor="let sensor of sensores;">
+                                      <tr>
+                                        <td>14.4</td>
+                                        <td>72</td>
+                                        <td>61.9</td>
+                                        <td>2022-07-12 08:22:20</td>
+                                      </tr>
+                                      <tr>
+<!--                                         <td class="txt-oflo">{{sensores.TEMPERATURE}}</td>
+                                        <td class="txt-oflo">{{sensores.HUMIDITY}}</td>
+                                        <td class="txt-oflo">{{sensores.MOUISTURE}}</td>
+                                        <td class="txt-oflo">{{sensores.DATE}}</td>  -->
+                                      </tr>
+                                    <tr>
+                                      <td>14.4</td>
+                                      <td>72</td>
+                                      <td>62.8</td>
+                                      <td>2022-07-12 08:21:47</td>
+                                    </tr>
+                                    <tr>
+                                      <td>14.4</td>
+                                      <td>72</td>
+                                      <td>62.9</td>
+                                      <td>2022-07-12 08:21:17</td>
+                                    </tr>
+                                    <tr>
+                                    <td>14.5</td>
+                                    <td>72</td>
+                                    <td>62</td>
+                                    <td>2022-07-12 08:20:47</td>
+                                    </tr>
+                                    <tr>
+                                      <td>14.5</td>
+                                      <td>72</td>
+                                      <td>62.9</td>
+                                      <td>2022-07-12 08:20:17</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                      </div>
+                  </div>
+              </div>
+              <!-- ============================================================== -->
+              <!-- TABLA RESULTADOS MINERIA -->
+              <!-- ============================================================== -->
+              <div class="row">
+                  <!-- .col -->
+                  <div class="col-md-12 col-lg-12 col-sm-12">
+                      <div class="card white-box p-0">
+                          <div class="card-body">
+                              <h3 class="box-title mb-0">Resultados de predicciones </h3>
+                          </div>
+                            <!-- tabla 1 -->
+                          <div class="tab-content" id="nav-tabContent">
+                            <!-- <div class="tab-pane fade show active" id="nav-rf" role="tabpanel" aria-labelledby="nav-rf-tab"> -->
+                              <!--Contenido del TAB-->
+                              <div class="card text-center border border-primary">
+                                <div class="card-header bg-primary">
+                                  <h5 class="text-bar">Porcentaje de error promedio </h5>
+                                </div>
+                                <div class="card-body">
+                                  <blockquote class="blockquote mb-0">
+                                    <h2>Regresión Lineal Multiple</h2>
+                                    <!----------------------------------------------------------------------------------------------->
+                                    <div class="table-wrapper-scroll-y my-custom-scrollbar_3">
+                                      <table class="table table-bordered table-striped mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th class="header" scope="col">Dataset</th>
+                                            <th class="header" scope="col">Humedad Suelo</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th class="header" scope="col">Train</th>
+                                            <td>0,0544</td>
+                                          </tr>
+                                          <tr>
+                                            <th class="header" scope="col">Test</th>
+                                            <td>0,3186</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </blockquote>
+                                </div>
+                              </div>
+
+                              <div class="espacio2">
+                              </div>
+                            </div>
+                                               <!-- tabla 1 -->
+                                               <div class="tab-content" id="nav-tabContent">
+                                                <div class="tab-pane fade show active" id="nav-rf" role="tabpanel" aria-labelledby="nav-rf-tab">
+                                                  <!--Contenido del TAB-->
+                                                  <div class="card text-center border border-primary">
+                                                    <div class="card-header bg-primary">
+                                                      <h5 class="text-bar">Porcentaje de error promedio </h5>
+                                                    </div>
+                                                    <div class="card-body">
+                                                      <blockquote class="blockquote mb-0">
+                                                        <h2>Soporte de Vectores Regresión</h2> <!-- nombre del algoritmo -->
+                                                        <!----------------------------------------------------------------------------------------------->
+                                                        <div class="table-wrapper-scroll-y my-custom-scrollbar_3">
+                                                          <table class="table table-bordered table-striped mb-0">
+                                                            <thead>
+                                                              <tr>
+                                                                <th class="header" scope="col">Dataset</th>
+                                                                <th class="header" scope="col">Humedad Suelo</th>
+                                                                <!-- <th class="header" scope="col" >Presion atmosferica</th>
+                                                                <th class="header" scope="col">Temperatura</th> -->
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr>
+                                                                <th class="header" scope="col">Train</th>
+                                                                <td>0,1286</td>
+                                                                <!-- <td>0,26495833</td>
+                                                                <td>0,39286111</td> -->
+                                                              </tr>
+                                                              <tr>
+                                                                <th class="header" scope="col">Test</th>
+                                                                <td>0,3902</td>
+                                                                <!-- <td>1,31571181</td>
+                                                                <td>1,97737499</td> -->
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                        </div>
+                                                      </blockquote>
+                                                    </div>
+                                                  </div>
+
+                                                  <div class="espacio2">
+                                                  </div>
+                                                  </div>
+                                               </div>
+
+                                                                           <!-- tabla 1 -->
+                          <div class="tab-content" id="nav-tabContent">
+                            <!-- <div class="tab-pane fade show active" id="nav-rf" role="tabpanel" aria-labelledby="nav-rf-tab"> -->
+                              <!--Contenido del TAB-->
+                              <div class="card text-center border border-primary">
+                                <div class="card-header bg-primary">
+                                  <h5 class="text-bar">Porcentaje de error promedio </h5>
+                                </div>
+                                <div class="card-body">
+                                  <blockquote class="blockquote mb-0">
+                                    <h2>Regresión Polinomial</h2>
+                                    <!----------------------------------------------------------------------------------------------->
+                                    <div class="table-wrapper-scroll-y my-custom-scrollbar_3">
+                                      <table class="table table-bordered table-striped mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th class="header" scope="col">Dataset</th>
+                                            <th class="header" scope="col">Humedad Suelo</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th class="header" scope="col">Train</th>
+                                            <td>0,0464</td>
+                                          </tr>
+                                          <tr>
+                                            <th class="header" scope="col">Test</th>
+                                            <td>0,1836</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </blockquote>
+                                </div>
+                              </div>
+
+                              <div class="espacio2">
+                              </div>
+                            </div>
+
+
+              </div>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Container fluid  -->
+          <!-- ============================================================== -->
+          <!-- ============================================================== -->
+          <!-- footer -->
+          <!-- ============================================================== -->
+
+          <!-- ============================================================== -->
+          <!-- End footer -->
+          <!-- ============================================================== -->
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Page wrapper  -->
+      <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Wrapper -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- All Jquery -->
+  <!-- ============================================================== -->
+
+  <script src="../../assets/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap tether Core JavaScript -->
+  <script src="../../assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/app-style-switcher.js"></script>
+  <script src="../../assets/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+  <!--Wave Effects -->
+  <script src="../../assets/js/waves.js"></script>
+  <!--Menu sidebar -->
+  <script src="../../assets/js/sidebarmenu.js"></script>
+  <!--Custom JavaScript -->
+  <script src="../../assets/js/custom.js"></script>
+  <!--This page JavaScript -->
+  <!--chartis chart-->
+  <script src="../../assets/plugins/bower_components/chartist/dist/chartist.min.js"></script>
+  <script src="../../assets/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+  <script src="../../assets/js/pages/dashboards/dashboard1.js"></script>
+
